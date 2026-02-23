@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wallet Product Page</title>
+  <style>
+    body { font-family: Arial; }
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      width: 250px;
+    }
+    .out-of-stock { color: red; }
+  </style>
+</head>
+<body>
+
+<h1 id="main-product-name">Premium Leather Wallet</h1>
+<p id="main-category">Category: Wallet</p>
+<p id="main-price">$50</p>
+
+<h2>Best Seller Related Products</h2>
+
+<div id="related-products">
+
+  <!-- VALID PRODUCTS (Should Pass) -->
+
+  <div class="product-card" data-category="Wallet" data-stock="In Stock">
+    <h3>Wallet A</h3>
+    <p class="price">$48</p>
+  </div>
+
+  <div class="product-card" data-category="Wallet" data-stock="In Stock">
+    <h3>Wallet B</h3>
+    <p class="price">$52</p>
+  </div>
+
+  <div class="product-card" data-category="Wallet" data-stock="In Stock">
+    <h3>Wallet C</h3>
+    <p class="price">$40</p> <!-- Lower Boundary -->
+  </div>
+
+  <div class="product-card" data-category="Wallet" data-stock="In Stock">
+    <h3>Wallet D</h3>
+    <p class="price">$60</p> <!-- Upper Boundary -->
+  </div>
+
+  <div class="product-card" data-category="Wallet" data-stock="In Stock">
+    <h3>Wallet E</h3>
+    <p class="price">$55</p>
+  </div>
+
+  <div class="product-card" data-category="Wallet" data-stock="In Stock">
+    <h3>Wallet F</h3>
+    <p class="price">$45</p>
+  </div>
+
+  <!-- INVALID PRODUCTS (Should Be Ignored By Logic) -->
+
+  <div class="product-card" data-category="Belt" data-stock="In Stock">
+    <h3>Belt X</h3>
+    <p class="price">$50</p>
+  </div>
+
+  <div class="product-card" data-category="Wallet" data-stock="Out of Stock">
+    <h3>Wallet OutOfStock</h3>
+    <p class="price">$50</p>
+  </div>
+
+  <div class="product-card" data-category="Wallet" data-stock="In Stock">
+    <h3>Wallet Expensive</h3>
+    <p class="price">$200</p>
+  </div>
+
+</div>
+
+</body>
+</html>
