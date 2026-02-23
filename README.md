@@ -36,16 +36,29 @@ The feature validates:
 
 ##  Project Structure
 
+
+```
 surgeglobal-related-products-automation/
 │
-├── demo-site/ # Controlled test environment (HTML mock)
-├── pages/ # Page Object Model classes
-├── tests/ # Test specifications
-├── utils/ # Utility functions
-├── playwright.config.ts
-├── package.json
-├── README.md
-└── .github/workflows/ # CI pipeline
+├── demo-site/              # Controlled test environment (HTML mock)
+│   └── index.html
+│
+├── pages/                  # Page Object Model classes
+│   └── productPage.ts
+│
+├── tests/                  # Test specifications
+│   └── relatedProducts.spec.ts
+│
+├── utils/                  # Utility functions (if any)
+│
+├── playwright.config.ts    # Playwright configuration
+├── package.json            # Project dependencies
+├── README.md               # Project documentation
+│
+└── .github/
+    └── workflows/
+        └── playwright.yml  # CI/CD pipeline configuration
+```
 
 
 ---
